@@ -1,0 +1,24 @@
+{
+  "name": "iveri-cordova-plugin",
+  "version": "0.0.1",
+  "description": "A Cordova plugin for iVeri Payment Technologies",
+  "cordova": {
+    "id": "iveri-cordova-plugin",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thulari/iveriplugin.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "author": "iVeri Payment Tehnologies <sysadmin@iveri.com>",
+  "license": "MIT"
+
+}

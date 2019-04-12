@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+	<plugin id="iveri-cordova-plugin" version="0.0.1" 
+	 xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+	 xmlns:android="http://schemas.android.com/apk/res/android">
+	  <name>iVeriPlugin</name>
+	  
+	   <js-module name="iVeriPlugin" src="www/iVeriPlugin.js">
+		 <clobbers target="cordova.plugins.iVeriPlugin"/>
+	  </js-module>
+	  
+	  <platform name="ios">
+		<config-file parent="/*" target="config.xml">
+			<feature name="iVeriPlugin">
+				<param name="ios-package" value="iVeriPlugin"/>
+			</feature>
+		</config-file>
+		<source-file src="src/ios/iVeriPlugin.m"/>
+	  </platform>
+	  
+	  <platform name="android">
+        <framework src="javax.ws.rs-api-2.1"/>
+        <framework src="jboss-jsse-api_8.0_spec-1.0.0.Final"/>
+        <framework src="javax-ssl-1_1"/>
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="iVeriPlugin">
+				<param name="android-package" value="com.iveri.cordova.plugin.iVeriPlugin"/>
+			</feature>
+		</config-file>
+		<config-file parent="/*" target="AndroidManifest.xml"/>
+		<source-file src="src/android/iVeriPlugin.java" target-dir="src/iveri-cordova-plugin/iVeriPlugin"/>
+	  </platform>
+</plugin>
